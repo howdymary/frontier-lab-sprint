@@ -1,0 +1,41 @@
+[project]
+name = "frontier-lab-sprint"
+version = "0.1.0"
+description = "Two-month frontier lab preparation project: JAX transformer, scaling laws, and performance experiments."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "einops>=0.8.0",
+    "flax>=0.10.0",
+    "ipykernel>=6.29.0",
+    "jax>=0.5.0",
+    "jupyterlab>=4.3.0",
+    "matplotlib>=3.9.0",
+    "numpy>=2.0.0",
+    "optax>=0.2.4",
+    "orbax-checkpoint>=0.11.0",
+    "pandas>=2.2.0",
+    "rich>=13.9.0",
+    "tqdm>=4.67.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.8.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/frontier_lab_sprint"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
