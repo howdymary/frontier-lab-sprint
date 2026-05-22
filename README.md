@@ -2,6 +2,8 @@
 
 Two-month frontier-lab preparation project based on Vlad Feinberg's "How to Land a Frontier Lab Job".
 
+New computer setup starts here: [START_HERE.md](START_HERE.md)
+
 The goal is to produce a public evidence packet around a specific frontier-lab-relevant skill:
 
 - Foundation track: neural networks, backpropagation, optimization, and spiking neural networks.
@@ -19,6 +21,12 @@ uv sync
 uv run python scripts/check_env.py
 uv run pytest
 uv run python scripts/simulate_lif.py
+```
+
+Or run:
+
+```bash
+./scripts/bootstrap_project.sh
 ```
 
 ## First Milestone
